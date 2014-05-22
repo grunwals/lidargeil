@@ -1,0 +1,29 @@
+## list all files in data
+fls <- list.files("data", pattern = "locations.csv", full.names = TRUE)
+
+## load data
+loc.list <- lapply(fls, function(...) {
+  read.csv(..., stringsAsFactors = FALSE, fill = TRUE)
+})
+
+## to see the structure of the data list
+str(loc.list)
+
+fls
+
+##
+loc <- do.call("rbind", loc.list)
+str(loc)
+
+##
+spec <- read.csv("data/species_inventory.csv",
+                 stringsAsFactors = FALSE, fill = TRUE)
+str(spec)
+
+##
+loc.spec <- merge(loc, spec)
+str(loc.spec)
+
+##
+
+
