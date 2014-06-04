@@ -1,4 +1,4 @@
-hiermit beginnt es
+#hiermit beginnt es
 fls <- list.files("C:/Users/Korbinian/Desktop/uni/fernerkundung/data",
                   pattern = "locations.csv", full.names = TRUE)
 
@@ -17,7 +17,7 @@ loc.spec <- merge(loc, spec)
 save(loc.spec, file = "C:/Users/Korbinian/Desktop/uni/fernerkundung/Rfiles/script/tree_locations_species_all.RData")
 
 
-dann kommt das lange, was man noch auseinander nehmen kann
+#dann kommt das lange, was man noch auseinander nehmen kann
 
 
 load("C:/Users/Korbinian/Desktop/uni/fernerkundung/data/tree_locations_species_all.RData")
@@ -111,7 +111,7 @@ data.all$z <- neue_kood$z
 save(data.all, file= "C:/Users/Korbinian/Desktop/uni/fernerkundung/data/data_all.csv")
 
 
-und hier noch die funktion, auf dir im 2ten teil auch zurückgeriffen wird
+#und hier noch die funktion, auf dir im 2ten teil auch zurückgeriffen wird
 
 #Koordinatenberechnung
 
